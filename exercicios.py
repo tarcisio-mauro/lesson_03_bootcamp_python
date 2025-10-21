@@ -4,6 +4,14 @@
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
 
+quantidade = 5
+preco = 30
+
+if quantidade > 0 and preco > 0:
+    print("Valid values")
+else:
+    print("Invalid values")
+
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
