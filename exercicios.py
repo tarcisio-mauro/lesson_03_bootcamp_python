@@ -52,15 +52,15 @@
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-idade = 15  # Exemplo de valor, substitua com input do usuário se necessário
-email = "usuario@exemplo.com"  # Exemplo de valor, substitua com input do usuário se necessário
+# idade = int(input("Type your age: "))  # Exemplo de valor, substitua com input do usuário se necessário
+# email = input("Type your email: ")  # Exemplo de valor, substitua com input do usuário se necessário
 
-if not 18 <= idade <= 65:
-    print("Idade fora do intervalo permitido")
-elif "@" not in email or "." not in email:
-    print("Email inválido")
-else:
-    print("Dados de usuário válidos")
+# if not 18 <= idade <= 65:
+#     print("Idade fora do intervalo permitido")
+# elif "@" not in email or "." not in email:
+#     print("Email inválido")
+# else:
+#     print("Dados de usuário válidos")
 
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
@@ -69,8 +69,21 @@ else:
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
 
+# transaction = {'value': 9000, 'time': 10}
+
+# if transaction['value'] > 10000 and not 9 <= transaction['time'] <= 18:
+#     print("Suspicious transaction (value and time)")
+# elif not 9 <= transaction['time'] <= 18:
+#     print("Suspicious transaction (outside commercial hours)")
+# elif transaction['value'] > 10000:
+#     print("Suspicious transaction (over 10k)")
+# else:
+#     print("Valid transaction")
+
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+text = "Agora, vamos contar as palavras!"
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
