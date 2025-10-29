@@ -83,7 +83,22 @@
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
-text = "Agora, vamos contar as palavras!"
+# Example
+# a = ['Mary', 'had', 'a', 'little', 'lamb']
+# for i in range(len(a)):
+#     print(i, a[i])
+
+# texto = "a raposa marrom salta sobre o cachorro preguiçoso" #string
+# palavras = texto.split() #list
+# contagem_palavras = {} #dictionary 
+
+# for palavra in palavras:
+#     if palavra in contagem_palavras:
+#         contagem_palavras[palavra] += 1
+#     else:
+#         contagem_palavras[palavra] = 1
+
+# print(contagem_palavras)
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
