@@ -98,13 +98,35 @@
 #     else:
 #         contagem_palavras[palavra] = 1
 
-# print(contagem_palavras)
+# total_palavras = len(contagem_palavras)
+# print(f"O total de palavras no texto é {total_palavras}")
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+# numeros = [10, 20, 30, 40, 50]
+# minimo = min(numeros)
+# maximo = max(numeros)
+# normalizados = [(x - minimo) / (maximo - minimo) for x in numeros] # more direct use of the for structure, does the task for all numbers in the list
+
+# print(normalizados)
+
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
+usuarios = [
+    {"nome": "Alice", "email": "alice@example.com"},
+    {"nome": "Bob", "email": ""},
+    {"nome": "Carol", "email": "carol@example.com"}
+]
+
+for usuario in usuarios:
+    if usuario["email"] == "":
+        usuario_invalido = usuario["nome"]
+    else:
+        pass
+
+print(f"Usuário inválido (faltando email): {usuario_invalido}")
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
