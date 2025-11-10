@@ -114,25 +114,42 @@
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
-usuarios = [
-    {"nome": "Alice", "email": "alice@example.com"},
-    {"nome": "Bob", "email": ""},
-    {"nome": "Carol", "email": "carol@example.com"}
-]
+# usuarios = [
+#     {"nome": "Alice", "email": "alice@example.com"},
+#     {"nome": "Bob", "email": ""},
+#     {"nome": "Tarci", "email": ""},
+#     {"nome": "Carol", "email": "carol@example.com"}
+# ]
 
-for usuario in usuarios:
-    if usuario["email"] == "":
-        usuario_invalido = usuario["nome"]
-    else:
-        pass
+# usuarios_invalidos = [usuario for usuario in usuarios if usuario["email"] == ""]
 
-print(f"Usuário inválido (faltando email): {usuario_invalido}")
+# for usuario in usuarios_invalidos:
+#     print(usuario["nome"])
+
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
+# numeros = range(1,11)
+# numeros_pares = [x for x in numeros if x % 2 == 0]
+
+# print(numeros_pares)
+
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800}
+]
+
+vendas_eletronicos = [venda for venda in vendas if venda["categoria"] == "eletrônicos"]
+
+for venda in vendas_eletronicos:
+    
+
+vendas_livros = [venda for venda in vendas if venda["categoria"] == "livros"]
 
 ### Exercícios com WHILE
 
