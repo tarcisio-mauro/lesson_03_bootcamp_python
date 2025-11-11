@@ -138,18 +138,28 @@
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 
+# Abaixo é uma lista de dicionários. Cada dicionário é como se fosse uma linha de uma tabela.
+# Dessa forma, uma lista de dicionários é como se fosse uma tabela com várias linhas.
+# Cada dicionário tem items, que são como colunas armazenando informações para cada linha da tabela
 vendas = [
     {"categoria": "eletrônicos", "valor": 1200},
     {"categoria": "livros", "valor": 200},
     {"categoria": "eletrônicos", "valor": 800}
 ]
 
-vendas_eletronicos = [venda for venda in vendas if venda["categoria"] == "eletrônicos"]
+total_por_categoria = {} # Cria um dicionário (linha de uma nova tabela) vazio que vai armazenar o total de vendas por categoria.
 
-for venda in vendas_eletronicos:
+for venda in vendas:                    # divide a tabela em linhas, e percorre todas as linhas
+    categoria = venda["categoria"]      # armazena a coluna categoria de cada linha (venda)
+    valor = venda["valor"]              # armazena a coluna valor de cada linha (venda)
     
+    if categoria in total_por_categoria:            # Checks if categoria is already on the new table categoria column   
+        total_por_categoria[categoria] += valor     # if yes than sums the value with the existing value for that category
+    else:
+        total_por_categoria[categoria] = valor     # if not then adds category and takes the first value
 
-vendas_livros = [venda for venda in vendas if venda["categoria"] == "livros"]
+print(total_por_categoria)     # prints the new one line table after the for, thus with the updated values
+
 
 ### Exercícios com WHILE
 
